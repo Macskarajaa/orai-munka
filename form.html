@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sex3</title>
+</head>
+<body>
+    <p>gondoltam egy számra, tippelj😎😎😎😫😫😫</p>
+    <p class="msg"></p>
+    <form>
+        <input type="text" id="tipp">
+        <input type="button" value="ellenőrizz" onclick="verify()">
+
+    </form>
+    <script>
+        function genRandNr(min, max){
+            return Math.round(Math.random()*max - min) + min
+        }
+        //a gép kisorsol egy véletlen számot 1 és 100 között
+        let randNr = genRandNr(1,100)
+        console.log(randNr)
+        //az űrlapnak value attribútuma van
+        function verify(){
+            console.log('klikk volt')
+            //olvassuk ki az értékét
+            let count = 0;
+            console.log(count)
+            let tipp=document.getElementById("tipp").value
+            console.log(tipp, typeof tipp)
+            document.querySelector(".msg").innerHTML = tipp==randNr ?
+             'talált' : 'nem talált'
+            if(randNr =! tipp){
+                count ++;
+            }else if(count == 3){
+                document.querySelector("tipp").innerHTML = `Sajnáljuk ez nem sikerült, a helyes szám a` + randNr + `volt`
+            }
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <button id="dec" onclick="change(-1)">-</button>
+    <div class="count">0</div>
+    <button id="inc" onclick="change(1)">+</button>
+    <script>
+//a számlálónk -5 és 5 között vehet fel értékeket
+    let value = 0
+
+        function change(step){
+        console.log(step);
+        value+=step
+        document.querySelector('.count').textContent = value
+        document.getElementById('dec').disabled=(value<=-5)
+        document.getElementById('inc').disabled=(value>=5)
+        }
+    </script>
+</body>
+</html>

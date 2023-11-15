@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li:nth-child(2){
+            cursor: pointer;
+            font-size: 2rem;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>sex1</li>
+        <li onclick="test(this)">sex2</li>
+        <li>sex3</li>
+    </ul>
+    <script>
+        function test(domObj){
+            console.log(domObj);
+            console.log(domObj.previousElementSibling);
+            console.log(domObj.nextElementSibling);
+            console.log(domObj.parentElement);
+            console.log(domObj.parentElement.children); //iretálható adatszerkezet
+            //a tömb első eleme:
+            console.log(domObj.parentElement.children[0])
+        }
+    </script>
+</body>
+</html>

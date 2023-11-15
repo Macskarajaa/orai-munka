@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <input id="szín" type="color" placeholder="Ajd meg egy színt">
+        <input type="button" value="színez" onclick="szinez()">    
+    </form>
+    <div>
+    </div>
+    <script>
+        //feliratkozom a click eseményre : függvény kell
+        function szinez(){
+            //konzolkiírás
+            console.log("Klikk volt");
+            //ki kell olvasni az input elemnek az attribútumát
+            console.log(document.getElementById('szín'))
+            const color=document.getElementById('szín').value
+            //írd ki konzolba
+            console.log(color);
+            //ki kell keresni a div-et a DOM-ból
+            console.log(document.querySelector('div'))
+            document.querySelector('div').style.backgroundColor=color
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div{
+            font-size: 3rem;
+        }
+    </style>
+    <button onclick="emoji()">are you happy?</button>
+    <div>😎</div>
+    <script>
+        function emoji(){
+            console.log("gomb megnyomva");
+            let emoji = document.querySelector("div").innerHTML
+            if(emoji == "😎"){
+                document.querySelector("div").innerHTML = "👺"
+            console.log("valt")
+            }else if(emoji == "👺"){
+                document.querySelector("div").innerHTML = "😎"
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .xd{
+        
+         width: 100px;
+         height: 100px;
+         border: 1px solid black;
+         justify-content: center;
+         text-align: center;
+         display: flex;
+         align-items: center;
+         align-self: center;
+     }
+</style>
+<body>
+    <div contenteditable class="xd">
+        asd
+    </div>
+    <h1 id="irt"></h1>
+    <button onclick="modify(this)">Modify text</button>
+    <script>
+        function modify(szoveg){
+            console.log(szoveg.textContent);
+            document.querySelector("h1").innerHTML = document.querySelector("div").innerHTML;
+        }
+    </script>
+</body>
+</html>

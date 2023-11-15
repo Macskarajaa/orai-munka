@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="doboz">
+        <input type="button" onclick="change(red)" value="red"></button>        
+        <input type="button" onclick="change(green)" value="green">
+        <input type="button" onclick="change(blue)" value="blue">
+    </div>
+
+        <script>
+            function change(color){
+                console.log(color.value)
+                document.querySelector("body").style.backgroundColor=color.value;
+            }
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+         ul{
+
+         }
+         h1{
+         }
+        li{
+           list-style: none;
+           border: 1px solid black;
+        }
+        #taskinput{
+            width: 200px;
+            height: 30px;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            border: 1px solid black;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+        }
+        .done{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">toDo app</h1>
+    <div class="main">
+        
+        <input type="text" placeholder="Add a new task" id="taskinput">
+        <button onclick="addtask()" >add task</button>
+
+    <ul id="tasklist">
+    </ul>
+    </div>
+
+    <script>
+        function addtask(){
+        let task = document.getElementById('taskinput').value;
+        document.getElementById('taskinput').value=''
+        console.log(task);
+        if(!task) return
+        document.getElementById("tasklist").innerHTML+=
+        ` 
+        <li>
+            <span onclick="completeTask(this)">✅</span>
+            <span>${task}</span>
+            <span onclick="deleteTask(this)">❌</span>
+        </li>
+        `
+        
+        }
+        function completeTask(domObj){
+            domObj.nextElementSibling.classList.toggle('done')
+        }
+        function deleteTask(domObj){
+            domObj.parentElement.remove()
+        }
+
+    </script>
+</body>
+</html>

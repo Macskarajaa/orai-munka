@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="floor">Floor:</p>
+    <p class="round">Round:</p>
+    <p class="ceil">Ceil: </p>
+    <script>
+        //JS objektumok
+        //hozz létre véletlen számot egy és tíz között
+        const randomnumber = Math.floor(Math.random()*10) + 1
+        //véletlenszám intervallumban
+        const randomnumber2 = Math.floor(Math.random()*10) + 1
+        let min = 10
+        let max = 16
+        const randomnumber3 = Math.floor(Math.random()*(max - min+1)) + min
+        document.querySelector('.floor').textContent=randomnumber3
+        const randomnumber4 = Math.floor(Math.random()*(max - min)) + min
+        document.querySelector('.floor').textContent=randomnumber4
+        const randomnumber5 = Math.floor(Math.random()*(max - min+1)) + min-1
+        document.querySelector('.floor').textContent=randomnumber5
+        console.log(randomnumber)
+        console.log(randomnumber2)
+    </script>
+</body>
+</html>
